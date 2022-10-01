@@ -105,6 +105,12 @@ source ~/.bashrc
 
 *Installation time should take no more than 10 minutes.*
 
+## Running DIAMOND
+
+The DIAMOND mapping script can be run from the `SAMap_diamond_vignette.ipynb` Jupyter notebook.
+
+Depending on the number of cores available on your machine and the size/type of the input fasta files, this step may take up to around 10 minutes.
+
 ## Running LAST
 
 The LAST mapping script can be run from the `SAMap_last_vignette.ipynb` Jupyter notebook.
