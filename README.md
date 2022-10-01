@@ -28,6 +28,7 @@ Create and activate a new environment for SAMap as follows:
 # Install SAMap dependencies availabe in conda
 conda create -n SAMap -c conda-forge python=3.7 pip pybind11 h5py=2.10.0 leidenalg python-igraph texttable
 conda activate SAMap
+conda install -c bioconda last
 ```
 
 Having activated the environment, install SAMap like so:
@@ -72,7 +73,28 @@ echo "export PATH=\"$PATH:/your/directory/ncbi-blast-${ncbi_blast_version}+/bin\
 source ~/.bashrc
 ```
 
+LAST must be installed for the commandline.
+
+```bash
+# Clone LAST.
+git clone https://gitlab.com/mcfrith/last.git
+
+# Compile LAST binaries.
+cd last
+make
+
+# Add LAST programs to PATH.
+echo "export PATH=\"$PATH:/your/directory/last/bin\"" >> ~/.bashrc
+source ~/.bashrc
+```
+
 *Installation time should take no more than 10 minutes.*
+
+## Running LAST
+
+The LAST mapping script can be run from the `SAMap_last_vignette.ipynb` Jupyter notebook.
+
+Depending on the number of cores available on your machine and the size/type of the input fasta files, this step may take up to around 10 minutes.
 
 ## Running BLAST
 
