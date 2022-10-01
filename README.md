@@ -28,6 +28,7 @@ Create and activate a new environment for SAMap as follows:
 # Install SAMap dependencies availabe in conda
 conda create -n SAMap -c conda-forge python=3.7 pip pybind11 h5py=2.10.0 leidenalg python-igraph texttable
 conda activate SAMap
+conda install -c bioconda diamond
 conda install -c bioconda last
 ```
 
@@ -70,6 +71,20 @@ tar -xzvf "ncbi-blast-${ncbi_blast_version}+-x64-linux.tar.gz"
 
 # Add NCBI BLAST programs to PATH.
 echo "export PATH=\"$PATH:/your/directory/ncbi-blast-${ncbi_blast_version}+/bin\"" >> ~/.bashrc
+source ~/.bashrc
+```
+
+DIAMOND must be installed for the commandline.
+
+```bash
+# Get DIAMOND.
+mkdir -p diamond
+cd diamond
+wget http://github.com/bbuchfink/diamond/releases/download/v2.0.15/diamond-linux64.tar.gz
+tar xzf diamond-linux64.tar.gz
+
+# Add DIAMOND programs to PATH.
+echo "export PATH=\"$PATH:/your/directory/diamond\"" >> ~/.bashrc
 source ~/.bashrc
 ```
 
